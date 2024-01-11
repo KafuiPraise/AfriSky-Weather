@@ -7,26 +7,25 @@ AfriSky Weather App is a simple and intuitive weather application that provides 
 Check out the live demo of the app deployed on Firebase: [AfriSky Weather App](https://skyweather002.web.app)
 
 ### Features
-
-- **Current Weather Display:** Get instant access to the current weather conditions, including temperature, description, and wind speed.
-- **Search Functionality:** Easily search for weather information by city name.
-- **Dynamic Backgrounds:** The app dynamically changes its background based on the current weather conditions.
-- **Responsive Design:** The user interface is designed to be responsive, providing a seamless experience across various devices.
+- *Current Weather Display:* Get instant access to the current weather conditions, including temperature, description, and wind speed.
+- *Search Functionality:* Easily search for weather information by city name.
+- *Dynamic Backgrounds:* The app dynamically changes its background based on the current weather conditions.
+- *Responsive Design:* The user interface is designed to be responsive, providing a seamless experience across various devices.
 
 ### Getting Started
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/KafuiPraise/Afrivisio.git
-   ```
+1. *Clone the Repository:*
+   bash
+   git clone https://github.com/KafuiPraise/AfriSky-Weather.git
+   
 
-2. **Navigate to the Project Directory:**
-   ```bash
-   cd AfriVisio
-   ```
+2. *Navigate to the Project Directory:*
+   bash
+   cd AfriSky
+   
 
-3. **Open `index.html` in a Web Browser:**
-   Simply open the `index.html` file in your preferred web browser to launch the application.
+3. **Open index.html in a Web Browser:**
+   Simply open the index.html file in your preferred web browser to launch the application
 
 ### Usage
 
@@ -40,7 +39,7 @@ The app has been deployed on Firebase for easy access. Visit the live demo: [Afr
 
 ### Dependencies
 
-- **OpenWeatherMap API:** The app relies on the OpenWeatherMap API to fetch weather data. You need to obtain an API key by signing up at [OpenWeatherMap](https://openweathermap.org/) and replace the placeholder in the `weatherinfo.js` file.
+- *OpenWeatherMap API:* The app relies on the OpenWeatherMap API to fetch weather data. You need to obtain an API key by signing up at [OpenWeatherMap](https://openweathermap.org/) and replace the placeholder in the weatherinfo.js file.
 
 ### Contributing
 
@@ -48,7 +47,7 @@ Contributions are welcome! Please follow the [Contribution Guidelines](CONTRIBUT
 
 ### License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License
 
 ### Acknowledgments
 
