@@ -7,7 +7,6 @@ AfriSky Weather App is a simple and intuitive weather application that provides 
 Check out the live demo of the app deployed on Firebase: [AfriSky Weather App](https://skyweather002.web.app)
 
 ### Features
-
 - *Current Weather Display:* Get instant access to the current weather conditions, including temperature, description, and wind speed.
 - *Search Functionality:* Easily search for weather information by city name.
 - *Dynamic Backgrounds:* The app dynamically changes its background based on the current weather conditions.
@@ -26,7 +25,7 @@ Check out the live demo of the app deployed on Firebase: [AfriSky Weather App](h
    
 
 3. **Open index.html in a Web Browser:**
-   Simply open the index.html file in your preferred web browser to launch the application.
+   Simply open the index.html file in your preferred web browser to launch the application
 
 ### Usage
 
