@@ -17,12 +17,12 @@ Check out the live demo of the app deployed on Firebase: [AfriSky Weather App](h
 
 1. *Clone the Repository:*
    bash
-   git clone https://github.com/KafuiPraise/Afrivisio.git
+   git clone https://github.com/KafuiPraise/AfriSky-Weather.git
    
 
 2. *Navigate to the Project Directory:*
    bash
-   cd AfriVisio
+   cd AfriSky
    
 
 3. **Open index.html in a Web Browser:**
