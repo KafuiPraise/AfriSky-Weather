@@ -1,38 +1,38 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>AfriSky Weather App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriSky Weather</title>
 
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
 <body>
-    <h1 id="intro">Weather alert! 100% chance of a good time</h1>
-    <div id="weatherContainer">
-        <div id="weatherDescription">
-            <h1 id="cityHeader"></h1>
-            <div id="currentTime"></div>
-            <div id="weatherMain">
-                <div id="temperature"></div>
-                <div id="weatherDescriptionHeader"></div>
-                <div><img id="documentIconImg"></div>
-                <div id="feelsLike"></div>
-                <div id="day"></div>
-                <div id="night"></div>
-                <div id="evening"></div>
-                <div id="morning"></div>
+    
+    <div class="main">
+        <img class="weather-app-icon" src="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" alt="">
+        <h1>AfriSky Weather</h1>
+        <div class="location-input">
+            <input type="text" id="searchInput" placeholder="Search location..">
+            <button id="searchButton">Search</button>
+            <a href="./index.html" id="searchButton">Home</a>
+        </div>
+        <div class="weather-container" style="display: none;">
+            <div class="location-date">
+                <h2 id="searchedLocation"></h2> 
+                <small id="dateToday"></small> 
+            </div> 
+            <div class="weather-today">
+                <div class="weather-cloud">
+                    <img src="https://openweathermap.org/img/wn/11d@2x.png" alt="cloud">
+                    <h4>Rain</h4>
+                </div>
+                <div class="location-weather">
+                </div>
             </div>
-            <hr>
-            <div id="windSpeed" class="bottom-details"></div>
-            <div id="humidity" class="bottom-details"></div>
-            <button id="backButton">Back</button>
         </div>
     </div>
-
-    
-
-    <script src="weatherinfo.js"></script>
-
-
+    <script src="./script.js"></script>
 </body>
-
 </html>
