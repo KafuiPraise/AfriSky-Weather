@@ -1,39 +1,74 @@
-window.appId = '735369837b9f826d6a2e5b7a4bdff16f';
-window.units = 'metric';
-let searchMethod; // q means searching as a string.
+const cityInput = document.getElementById("searchInput");
+const searchButton = document.getElementById("searchButton");
+const searchedLocation = document.getElementById("searchedLocation");
+const dateToday = document.getElementById("dateToday");
+const weatherCloudImage = document.querySelector(".weather-cloud img");
+const weatherCloudDescription = document.querySelector(".weather-cloud h4");
+const currentWeatherDiv = document.querySelector(".location-weather");
 
-    document.getElementById('goButton').addEventListener('click', () => {
-        let searchTerm = document.getElementById('searchInput').value;
-        if (searchTerm)
-            searchWeather(searchTerm);
-    });
+const API_KEY = "74bdea3d5e3168e5fe68db26434058e5";
 
-    document.getElementById('searchInput').addEventListener('keyup', function (event) {
-        if (event.key === 'Enter') {
-            let searchTerm = this.value;
-            if (searchTerm) {
-                searchWeather(searchTerm);
+const createWeatherCard = (_cityName, weatherItem) => {
+    return `
+        <div class="location-weather">
+            <small>Temperature: ${Math.floor(weatherItem.main.temp -273)}&deg;C</small>
+            <small>WindSpeed: ${weatherItem.wind.speed} km/h</small>
+            <small>Humidity: ${weatherItem.main.humidity}%</small>
+        </div>`;
+};
+
+const updatePageContent = (cityName, weatherItem) => {
+    searchedLocation.textContent = cityName;
+    
+    const currentDate = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+    dateToday.textContent = currentDate.toLocaleDateString('en-US', options);
+
+    weatherCloudImage.src = `https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png`;
+    weatherCloudDescription.textContent = weatherItem.weather[0].main;
+
+    const currentWeatherHTML = createWeatherCard(cityName, weatherItem);
+    currentWeatherDiv.innerHTML = currentWeatherHTML;
+};
+
+const getWeatherDetails = (cityName, latitude, longitude) => {
+    const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
+
+    fetch(WEATHER_API_URL)
+        .then(response => response.json())
+        .then(data => {
+            cityInput.value = "";
+
+            updatePageContent(cityName, data);
+        })
+        .catch(error => {
+            console.error("An error occurred while fetching the weather forecast:", error);
+            alert("An error occurred while fetching the weather forecast!");
+        });
+};
+
+const getCityCoordinates = () => {
+    document.querySelector('.weather-container').style.display = "";
+    const cityName = cityInput.value.trim();
+    if (cityName === "") return;
+
+    const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
+
+    fetch(API_URL)
+        .then(response => response.json())
+        .then(data => {
+            const { coord } = data;
+            if (!coord) {
+                alert(`No coordinates found for ${cityName}`);
+                return;
             }
-        }
-    });
+            getWeatherDetails(cityName, coord.lat, coord.lon);
+        })
+        .catch(error => {
+            console.error("An error occurred while fetching the coordinates:", error);
+            alert("An error occurred while fetching the coordinates!");
+        });
+};
 
-    function getSearchMethod(searchTerm) {
-        if (searchTerm.length === 5 && Number.parseInt(searchTerm) + '' === searchTerm)
-            searchMethod = 'zip';
-        else
-            searchMethod = 'q';
-            return searchMethod;
-    }
-
-    function searchWeather(searchTerm) {
-        getSearchMethod(searchTerm);
-        fetch(`https://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&APPID=${appId}&units=${units}`)
-            .then((result) => result.json())
-            .then((res) => {
-                const queryParams = `?temperature=${res.main.temp}&description=${res.weather[0].description}&city=${res.name}`;
-                window.location.href = 'weatherpage.html' + queryParams;
-            })
-            .catch((error) => {
-                console.error('Error fetching weather details:', error.message);
-            });
-    }
+searchButton.addEventListener("click", getCityCoordinates);
+cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());
