@@ -233,3 +233,24 @@
   });
 
 })()
+
+/** Function to direct geolocation button on-click to location.html */
+document.addEventListener('DOMContentLoaded', function () {
+  // Check if the current page is location.html before executing the code
+  if (window.location.pathname === '/location.html') {
+      // Get the geolocation button element by its ID
+      const geolocationButton = document.getElementById('geolocationButton');
+
+      // Check if the geolocation button element is found
+      if (geolocationButton) {
+          // Add a click event listener to the geolocation button
+          geolocationButton.addEventListener('click', function () {
+              // Call the getYourLocation function when the button is clicked
+              getYourLocation();
+          });
+      } else {
+          // Log an error message to the console if the button is not found
+          console.error('Geolocation button not found');
+      }
+  }
+});
