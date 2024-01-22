@@ -6,13 +6,13 @@ const weatherCloudImage = document.querySelector(".weather-cloud img");
 const weatherCloudDescription = document.querySelector(".weather-cloud h4");
 const currentWeatherDiv = document.querySelector(".location-weather");
 
-const API_KEY = "74bdea3d5e3168e5fe68db26434058e5";
+const API_KEY = "735369837b9f826d6a2e5b7a4bdff16f";
 
 const createWeatherCard = (_cityName, weatherItem) => {
     return `
         <div class="location-weather">
             <small>Temperature: ${Math.floor(weatherItem.main.temp -273)}&deg;C</small>
-            <small>WindSpeed: ${weatherItem.wind.speed} km/h</small>
+            <small>WindSpeed: ${weatherItem.wind.speed}m/s</small>
             <small>Humidity: ${weatherItem.main.humidity}%</small>
         </div>`;
 };
