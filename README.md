@@ -4,9 +4,9 @@ AfriSky Weather App is a simple and intuitive weather application that provides 
 Check out the live demo of the app deployed on Firebase: [AfriSky Weather App](https://skyweather002.web.app)
 You can read our blog post [here](https://medium.com/@rosinaantwi96/navigating-weather-wonders-the-afrisky-weather-app-journey-d4570c379f22 )
 Connect with the Authors on Linkedin:
-[Matilda Dogbatsey](https://www.linkedin.com/in/matilda-dogbatsey)
-[Rosina Antwi](https://www.linkedin.com/in/rosina-antwi-61a130271) 
-[Freda Tsorme-Dzebu](www.linkedin.com/in/freda-tsorme-dzebu-1498b0a7) 
+- [Matilda Dogbatsey](https://www.linkedin.com/in/matilda-dogbatsey)
+- [Rosina Antwi](https://www.linkedin.com/in/rosina-antwi-61a130271) 
+- [Freda Tsorme-Dzebu](www.linkedin.com/in/freda-tsorme-dzebu-1498b0a7) 
 
 ### Technology
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoWidth=40)
@@ -15,9 +15,6 @@ Connect with the Authors on Linkedin:
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-323330?style=for-the-badge&logo=bootstrap&logoWidth=40)
 ![Firebase](https://img.shields.io/badge/Firebase-323330?style=for-the-badge&logo=firebase&logoWidth=40)
 ![Node.js](https://img.shields.io/badge/Node.js-323330?style=for-the-badge&logo=node.js&logoWidth=40)
-
-
-
 
 ### Features
 - *Current Weather Display:* Get instant access to the current weather conditions, including temperature, description, and wind speed.
@@ -29,23 +26,21 @@ Connect with the Authors on Linkedin:
 ### Installation
 **On the terminal**
  1. *Install the following dependencies:*
-       [Node.js](https://nodejs.org/) installed on your machine.
-       [npm](https://www.npmjs.com/) (Node Package Manager) to manage project    dependencies.
+       - [Node.js](https://nodejs.org/) installed on your machine.
+       - [npm](https://www.npmjs.com/) (Node Package Manager) to manage project    dependencies.
  2. *Clone the Repository:*
-       `bash`
-       `git clone https://github.com/KafuiPraise/AfriSky-Weather.git`
+       - `git clone https://github.com/KafuiPraise/AfriSky-Weather.git`
  3. *Navigate to the Project Directory:*
-      `bash`
-      `cd AfriSky-Weather`
- 4. *Run `npm install` and `npm start`*
- 5. *Open your web browser and visit http://localhost:3000*
+      - `cd AfriSky-Weather`
+ 4. *Run* `npm install` and `npm start`
+ 6. *Open your web browser and visit http://localhost:3000*
 
 **On Visual Studio Code**
   1. *Clone the Repository:*
         `git clone https://github.com/KafuiPraise/AfriSky-Weather.git`
   2. *Navigate to the Project Directory:*
-         AfriSky-Weather
-  3. *Open a live server or preview index.html in Web Browser 
+         - `AfriSky-Weather`
+  3. *Open a live server or preview index.html in Web Browser* 
 
 ### Usage
 - Click on the `Use Your Location` button to use the geolocation feature to fetch weather information. 
@@ -89,5 +84,4 @@ AfriSky Weather is an open-source project released under the MIT License.
 - Background images on the landing page are original shots by Matilda Dogbatsey
 
 ### Screenshots
-
 ![Weather App Screenshot](/screenshots/weather-app-screenshot.png)
